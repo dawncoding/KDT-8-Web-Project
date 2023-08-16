@@ -11,9 +11,9 @@ const mysql = require("mysql");
 
 //mysql연결
 const conn = mysql.createConnection({
-  host: "127.0.0.1",
-  user: "user",
-  password: "1234",
+  host: "kdt8-test.crjz0w77cjlu.ap-northeast-2.rds.amazonaws.com",
+  user: "admin",
+  password: "ejsqmfl1234",
   database: "kdt8",
 });
 conn.connect((err) => {
