@@ -11,13 +11,13 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.render("index");
 });
-// const router = require("./routes");
-// app.use("/visitor", router);
+const router = require("./routes");
+app.use("/visitor", router);
 
-// //오류처리
-// app.use("*", (req, res) => {
-//   res.render("404");
-// });
+//오류처리
+app.use("*", (req, res) => {
+  res.render("404");
+});
 
 app.listen(PORT, () => {
   console.log(`http://localhost:${PORT}`);
